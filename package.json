@@ -1,6 +1,6 @@
 {
   "name": "@mk87/solidity-contracts",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Solidity contracts from MK87",
   "main": "index.js",
   "scripts": {
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/mark87-company/MK87-3-SOL-CONTRACTS/issues"
   },
-  "homepage": "https://github.com/mark87-company/MK87-3-SOL-CONTRACTS#readme"
+  "homepage": "https://github.com/mark87-company/MK87-3-SOL-CONTRACTS#readme",
+  "devDependencies": {
+    "typescript": "4.5.2"
+  }
 }
