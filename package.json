@@ -1,0 +1,22 @@
+{
+  "name": "@mk87/solidity-contracts",
+  "version": "0.0.1",
+  "description": "Solidity contracts from MK87",
+  "main": "index.js",
+  "scripts": {
+    "test": "1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mark87-company/MK87-3-SOL-CONTRACTS.git"
+  },
+  "keywords": [
+    "solidity"
+  ],
+  "author": "hsh2001",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mark87-company/MK87-3-SOL-CONTRACTS/issues"
+  },
+  "homepage": "https://github.com/mark87-company/MK87-3-SOL-CONTRACTS#readme"
+}
