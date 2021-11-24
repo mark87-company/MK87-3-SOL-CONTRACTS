@@ -1,2 +1,4 @@
 .gitignore
 .git
+index.ts
+tsconfig.json
