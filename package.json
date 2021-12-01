@@ -1,6 +1,6 @@
 {
   "name": "@mk87/solidity-contracts",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Solidity contracts from MK87",
   "main": "build/index.js",
   "scripts": {

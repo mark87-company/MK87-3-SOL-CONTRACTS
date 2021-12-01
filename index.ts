@@ -1,12 +1,34 @@
-import { Contract } from "./Contract";
+import RawMASToken from "./deployed-contracts/MASToken";
 
-export { Contract };
+type _ContractInterface = typeof RawMASToken["interface"];
 
-function readContract(name: string): Contract {
-  return require(`../deployed-contracts/${name}.json`);
+class _Contract {
+  protected interface: _ContractInterface[];
+  public address: string;
+
+  constructor(rawContract: {
+    interface: _ContractInterface[];
+    address: string;
+  }) {
+    this.address = rawContract.address;
+    this.interface = rawContract.interface;
+  }
+}
+
+class _MASToken extends _Contract {
+  constructor() {
+    // @ts-ignore
+    super(RawMASToken);
+  }
+
+  getFunctionInterface<Name extends keyof typeof RawMASToken["interface"]>(
+    name: Name
+  ): typeof RawMASToken["interface"][Name] {
+    // @ts-ignore
+    return this.interface[name];
+  }
 }
 
 export default {
-  MASToken: readContract("MASToken"),
-  TokenSales: readContract("TokenSales"),
+  MASToken: new _MASToken(),
 };
