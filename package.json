@@ -1,10 +1,11 @@
 {
   "name": "@mk87/solidity-contracts",
-  "version": "0.3.0",
+  "version": "1.0.0",
   "description": "Solidity contracts from MK87",
   "main": "build/index.js",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "create-code": "npm run build && node build/create-code && npm run build"
   },
   "repository": {
     "type": "git",
