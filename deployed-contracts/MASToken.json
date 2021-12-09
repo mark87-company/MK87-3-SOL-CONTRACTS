@@ -1,6 +1,6 @@
 {
   "options": {
-    "address": "0x822D0EfCB387210e5165565cA6414C7eE1dA98e8",
+    "address": "0x18BfA4E8c9c5c5f6763313Bd0F38A5e2A5333D16",
     "jsonInterface": [
       {
         "inputs": [
@@ -377,16 +377,6 @@
       },
       {
         "inputs": [
-          { "internalType": "uint256", "name": "", "type": "uint256" }
-        ],
-        "name": "uri",
-        "outputs": [{ "internalType": "string", "name": "", "type": "string" }],
-        "stateMutability": "view",
-        "type": "function",
-        "signature": "0x0e89341c"
-      },
-      {
-        "inputs": [
           { "internalType": "bytes4", "name": "interfaceId", "type": "bytes4" }
         ],
         "name": "supportsInterface",
@@ -407,28 +397,59 @@
       },
       {
         "inputs": [
-          { "internalType": "uint256", "name": "_tokenId", "type": "uint256" },
+          { "internalType": "uint256", "name": "_id", "type": "uint256" }
+        ],
+        "name": "totalSupply",
+        "outputs": [
+          { "internalType": "uint256", "name": "", "type": "uint256" }
+        ],
+        "stateMutability": "view",
+        "type": "function",
+        "signature": "0xbd85b039"
+      },
+      {
+        "inputs": [
           { "internalType": "uint256", "name": "_amount", "type": "uint256" },
           { "internalType": "string", "name": "_uri", "type": "string" },
-          { "internalType": "bool", "name": "_nft", "type": "bool" },
-          { "internalType": "uint16", "name": "royalty", "type": "uint16" }
+          { "internalType": "bool", "name": "_nft", "type": "bool" }
         ],
-        "name": "mint_byOtherUsers",
+        "name": "mint_byOtherUsers_1st",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function",
-        "signature": "0x910ab966"
+        "signature": "0xb4fecad6"
       },
       {
         "inputs": [
           { "internalType": "uint256", "name": "_tokenId", "type": "uint256" },
-          { "internalType": "uint16", "name": "_royalties", "type": "uint16" }
+          { "internalType": "uint256", "name": "_amount", "type": "uint256" }
         ],
-        "name": "_setRoyalty",
+        "name": "mint_additionalByOtherusers",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function",
-        "signature": "0xa0aae186"
+        "signature": "0x171a0ae6"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "_tokenIds",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "_amounts",
+            "type": "uint256[]"
+          },
+          { "internalType": "bool[]", "name": "_nfts", "type": "bool[]" },
+          { "internalType": "string[]", "name": "_uris", "type": "string[]" }
+        ],
+        "name": "mint_byAnyOneBatch",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function",
+        "signature": "0x7c635008"
       },
       {
         "inputs": [
@@ -456,6 +477,16 @@
       },
       {
         "inputs": [
+          { "internalType": "uint256", "name": "_tokenId", "type": "uint256" }
+        ],
+        "name": "uri",
+        "outputs": [{ "internalType": "string", "name": "", "type": "string" }],
+        "stateMutability": "view",
+        "type": "function",
+        "signature": "0x0e89341c"
+      },
+      {
+        "inputs": [
           { "internalType": "uint256", "name": "_tokenId", "type": "uint256" },
           {
             "internalType": "uint16",
@@ -477,22 +508,6 @@
             "internalType": "uint256",
             "name": "_burnAmount",
             "type": "uint256"
-          },
-          { "internalType": "address", "name": "_user", "type": "address" }
-        ],
-        "name": "burnBySuperUser",
-        "outputs": [],
-        "stateMutability": "nonpayable",
-        "type": "function",
-        "signature": "0xa83fce40"
-      },
-      {
-        "inputs": [
-          { "internalType": "uint256", "name": "_tokenId", "type": "uint256" },
-          {
-            "internalType": "uint256",
-            "name": "_burnAmount",
-            "type": "uint256"
           }
         ],
         "name": "burn",
@@ -500,10 +515,21 @@
         "stateMutability": "nonpayable",
         "type": "function",
         "signature": "0xb390c0ab"
+      },
+      {
+        "inputs": [
+          { "internalType": "uint256", "name": "_tokenId", "type": "uint256" },
+          { "internalType": "uint16", "name": "_royalties", "type": "uint16" }
+        ],
+        "name": "_setRoyalty",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function",
+        "signature": "0xa0aae186"
       }
     ]
   },
-  "_address": "0x822D0EfCB387210e5165565cA6414C7eE1dA98e8",
+  "_address": "0x18BfA4E8c9c5c5f6763313Bd0F38A5e2A5333D16",
   "_jsonInterface": [
     {
       "inputs": [
@@ -859,14 +885,6 @@
       "signature": "0xf2fde38b"
     },
     {
-      "inputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
-      "name": "uri",
-      "outputs": [{ "internalType": "string", "name": "", "type": "string" }],
-      "stateMutability": "view",
-      "type": "function",
-      "signature": "0x0e89341c"
-    },
-    {
       "inputs": [
         { "internalType": "bytes4", "name": "interfaceId", "type": "bytes4" }
       ],
@@ -886,28 +904,57 @@
     },
     {
       "inputs": [
-        { "internalType": "uint256", "name": "_tokenId", "type": "uint256" },
+        { "internalType": "uint256", "name": "_id", "type": "uint256" }
+      ],
+      "name": "totalSupply",
+      "outputs": [{ "internalType": "uint256", "name": "", "type": "uint256" }],
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0xbd85b039"
+    },
+    {
+      "inputs": [
         { "internalType": "uint256", "name": "_amount", "type": "uint256" },
         { "internalType": "string", "name": "_uri", "type": "string" },
-        { "internalType": "bool", "name": "_nft", "type": "bool" },
-        { "internalType": "uint16", "name": "royalty", "type": "uint16" }
+        { "internalType": "bool", "name": "_nft", "type": "bool" }
       ],
-      "name": "mint_byOtherUsers",
+      "name": "mint_byOtherUsers_1st",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function",
-      "signature": "0x910ab966"
+      "signature": "0xb4fecad6"
     },
     {
       "inputs": [
         { "internalType": "uint256", "name": "_tokenId", "type": "uint256" },
-        { "internalType": "uint16", "name": "_royalties", "type": "uint16" }
+        { "internalType": "uint256", "name": "_amount", "type": "uint256" }
       ],
-      "name": "_setRoyalty",
+      "name": "mint_additionalByOtherusers",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function",
-      "signature": "0xa0aae186"
+      "signature": "0x171a0ae6"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "_tokenIds",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "_amounts",
+          "type": "uint256[]"
+        },
+        { "internalType": "bool[]", "name": "_nfts", "type": "bool[]" },
+        { "internalType": "string[]", "name": "_uris", "type": "string[]" }
+      ],
+      "name": "mint_byAnyOneBatch",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0x7c635008"
     },
     {
       "inputs": [
@@ -935,6 +982,16 @@
     },
     {
       "inputs": [
+        { "internalType": "uint256", "name": "_tokenId", "type": "uint256" }
+      ],
+      "name": "uri",
+      "outputs": [{ "internalType": "string", "name": "", "type": "string" }],
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x0e89341c"
+    },
+    {
+      "inputs": [
         { "internalType": "uint256", "name": "_tokenId", "type": "uint256" },
         { "internalType": "uint16", "name": "_new_royalty", "type": "uint16" },
         { "internalType": "bool", "name": "_royalty", "type": "bool" }
@@ -948,18 +1005,6 @@
     {
       "inputs": [
         { "internalType": "uint256", "name": "_tokenId", "type": "uint256" },
-        { "internalType": "uint256", "name": "_burnAmount", "type": "uint256" },
-        { "internalType": "address", "name": "_user", "type": "address" }
-      ],
-      "name": "burnBySuperUser",
-      "outputs": [],
-      "stateMutability": "nonpayable",
-      "type": "function",
-      "signature": "0xa83fce40"
-    },
-    {
-      "inputs": [
-        { "internalType": "uint256", "name": "_tokenId", "type": "uint256" },
         { "internalType": "uint256", "name": "_burnAmount", "type": "uint256" }
       ],
       "name": "burn",
@@ -967,6 +1012,18 @@
       "stateMutability": "nonpayable",
       "type": "function",
       "signature": "0xb390c0ab"
+    },
+    {
+      "inputs": [
+        { "internalType": "uint256", "name": "_tokenId", "type": "uint256" },
+        { "internalType": "uint16", "name": "_royalties", "type": "uint16" }
+      ],
+      "name": "_setRoyalty",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0xa0aae186"
     }
-  ]
+  ],
+  "_wallet": { "_addressKeyringMap": {} }
 }

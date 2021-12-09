@@ -41,7 +41,8 @@ function createCode(name: string, contract: any) {
   const { address } = contract.options;
 
   code += `
-     address : "${address}",
+    jsonInterface: _jsonInterface,
+    address : "${address}",
   `;
 
   const functionNames = new Set<string>();

@@ -1,6 +1,7 @@
 {
+  "providers": {},
   "options": {
-    "address": "0xA285C64E516d71A8F5d648b0441fB136DD9DA53e",
+    "address": "0x4dd31E3D0A6e7478932a04816461c03Ad8C61139",
     "jsonInterface": [
       {
         "inputs": [
@@ -197,6 +198,30 @@
             "internalType": "uint256[]",
             "name": "_tokenIds",
             "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "_prices",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "_amounts",
+            "type": "uint256[]"
+          }
+        ],
+        "name": "SetForBatchSales",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function",
+        "signature": "0x7d3a1876"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "_tokenIds",
+            "type": "uint256[]"
           }
         ],
         "name": "withdrawSales",
@@ -241,7 +266,8 @@
       }
     ]
   },
-  "_address": "0xA285C64E516d71A8F5d648b0441fB136DD9DA53e",
+
+  "_address": "0x4dd31E3D0A6e7478932a04816461c03Ad8C61139",
   "_jsonInterface": [
     {
       "inputs": [
@@ -421,6 +447,22 @@
       "stateMutability": "nonpayable",
       "type": "function",
       "signature": "0xf4fb5dff"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "_tokenIds",
+          "type": "uint256[]"
+        },
+        { "internalType": "uint256[]", "name": "_prices", "type": "uint256[]" },
+        { "internalType": "uint256[]", "name": "_amounts", "type": "uint256[]" }
+      ],
+      "name": "SetForBatchSales",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0x7d3a1876"
     },
     {
       "inputs": [
