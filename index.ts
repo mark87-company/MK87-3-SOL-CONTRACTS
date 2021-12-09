@@ -1,5 +1,3 @@
+export { default as MASToken } from "./created-code/MASToken";
 
-          export const MASToken = require('./created-code/MASToken.ts')
-        ;
-          export const NFTSales = require('./created-code/NFTSales.ts')
-        
+export { default as NFTSales } from "./created-code/NFTSales";

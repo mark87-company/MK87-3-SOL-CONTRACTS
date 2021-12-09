@@ -13,10 +13,10 @@ Promise.all(
     contractNames
       .map(
         (name) => `
-          export const ${name} = require('./created-code/${name}.ts')
+        export { default as ${name} } from "./created-code/${name}";
         `
       )
-      .join(";")
+      .join("")
   );
 });
 
